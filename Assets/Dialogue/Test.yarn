@@ -1,0 +1,28 @@
+title: Test
+tags:
+---
+Booming Voice: THIS IS A TEST
+Booming Voice: IF YOU CAN HEAR ME, PLEASE RESPOND
+
+-> Um, Okay?
+    <<wait 1>>
+    Booming Voice: ...
+    [[*yell* OKAY!!!|Test.Thanks]]
+    [[*remain silent*|Test.Shit]]
+-> *remain silent*
+    [[Test.Shit]]
+===
+
+title: Test.Shit
+tags:
+---
+<<wait 1>>
+Booming Voice: SHIT
+===
+
+
+title: Test.Thanks
+tags:
+---
+Booming Voice: THANK YOU
+===
