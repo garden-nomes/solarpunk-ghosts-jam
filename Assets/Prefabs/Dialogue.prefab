@@ -813,13 +813,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yarnScripts:
-  - {fileID: 2480198943629176163, guid: 21a090511d2fe4780b44e6d24e3ae0aa, type: 3}
+  yarnScripts: []
   textLanguage: 
   variableStorage: {fileID: 4108987198319139661}
   dialogueUI: {fileID: 4108987198319139660}
-  startNode: Test
-  startAutomatically: 1
+  startNode: 
+  startAutomatically: 0
   onNodeStart:
     m_PersistentCalls:
       m_Calls: []
@@ -842,7 +841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueContainer: {fileID: 4108987197776218543}
-  textSpeed: 0.0001
+  textSpeed: 0
   optionButtons:
   - {fileID: 9101863145135452345}
   - {fileID: 9200049397996296352}
