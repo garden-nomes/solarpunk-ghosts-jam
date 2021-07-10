@@ -11,15 +11,9 @@ public class Interactor : MonoBehaviour
     public KeyCode[] interactActionKeys; // I should really learn how to use the new input system :/
 
     // maintain a list of Interactibles in the scene
-    private List<Interactible> interactibles;
-
-    private void Awake()
-    {
-        interactibles = new List<Interactible>();
-    }
+    private List<Interactible> interactibles = new List<Interactible>();
 
     // allow Interactible components to register/unregister themselves
-
     public void Register(Interactible interaction)
     {
         if (!interactibles.Contains(interaction))
@@ -45,7 +39,7 @@ public class Interactor : MonoBehaviour
         }
 
         // trigger interaction on key up
-        if (interactActionKeys != null && focused != null)
+        if (focused != null && interactActionKeys != null)
         {
             foreach (var keyCode in interactActionKeys)
             {
@@ -59,6 +53,12 @@ public class Interactor : MonoBehaviour
 
     private Interactible GetFocused()
     {
+        // don't focus anything when in a dialogue
+        if (GameManager.current.isInDialogue)
+        {
+            return null;
+        }
+
         var result = null as Interactible;
 
         // select an interactible to focus

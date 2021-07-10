@@ -10,6 +10,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        // disable while in dialogue
+        if (GameManager.current.isInDialogue)
+        {
+            return;
+        }
+
+        // simple 2D movement
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
         var velocity = Vector2.ClampMagnitude(new Vector2(horizontal, vertical), 1f) * moveSpeed;
