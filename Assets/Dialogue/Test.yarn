@@ -1,28 +1,14 @@
-title: Test
-tags:
+title: Test.Red
+tags: 
+colorID: 0
+position: 247,347
 ---
-Booming Voice: THIS IS A TEST
-Booming Voice: IF YOU CAN HEAR ME, PLEASE RESPOND
-
--> Um, Okay?
-    <<wait 1>>
-    Booming Voice: ...
-    [[*yell* OKAY!!!|Test.Thanks]]
-    [[*remain silent*|Test.Shit]]
--> *remain silent*
-    [[Test.Shit]]
+Red: Hi friend! Me and Blue are just here to test out talking to different NPCs.
 ===
-
-title: Test.Shit
-tags:
+title: Test.Blue
+tags: 
+colorID: 8
+position: 457,347
 ---
-<<wait 1>>
-Booming Voice: SHIT
-===
-
-
-title: Test.Thanks
-tags:
----
-Booming Voice: THANK YOU
+Blue: Heyo, I'm just hanging out with Red over there so you can test out talking to different NPCs.
 ===
