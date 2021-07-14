@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1889087277122856269}
   - component: {fileID: 1889087277122856268}
   - component: {fileID: 1889087277122856267}
+  - component: {fileID: 8054168564730896286}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -95,14 +96,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cd8ca5239ead4b628779927a80404e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueNode: 
+  yarnProgram: {fileID: 0}
+--- !u!114 &8054168564730896286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889087277122856265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 907cae7a0ac144b8790a742ceddfb783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   onInteract:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1889087277122856267}
+        m_TargetAssemblyTypeName: NPC, Assembly-CSharp
+        m_MethodName: Talk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onFocus:
     m_PersistentCalls:
       m_Calls: []
   onBlur:
     m_PersistentCalls:
       m_Calls: []
-  dialogueNode: 
-  yarnProgram: {fileID: 0}

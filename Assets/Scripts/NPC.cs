@@ -1,44 +1,27 @@
 using UnityEngine;
-using Yarn.Unity;
 
-public class NPC : Interactible
+public class NPC : MonoBehaviour
 {
     public string dialogueNode = null;
 
     [Header("Optional")]
     public YarnProgram yarnProgram;
 
-    private DialogueRunner dialogueRunner;
-
     private void Start()
     {
-        dialogueRunner = FindObjectOfType<DialogueRunner>();
-
-        // gracefully handle null dialogueRunner
-        if (dialogueRunner == null)
-        {
-            Debug.LogError("No DialogueRunner in scene");
-            return;
-        }
-
         // load yarn program if supplied
-        if (yarnProgram != null)
+        if (yarnProgram != null && GameManager.current.dialogueRunner != null)
         {
-            dialogueRunner.Add(yarnProgram);
+            GameManager.current.dialogueRunner.Add(yarnProgram);
         }
     }
 
-    // disable interaction if no dialogue node set
-    public override bool isInteractible => !string.IsNullOrWhiteSpace(dialogueNode);
-
-    override public void OnInteract()
+    public void Talk()
     {
-        base.OnInteract();
-
         // open dialogue
-        if (dialogueRunner != null)
+        if (GameManager.current.dialogueRunner != null)
         {
-            dialogueRunner.StartDialogue(dialogueNode);
+            GameManager.current.dialogueRunner.StartDialogue(dialogueNode);
         }
     }
 }
