@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Works in conjunction with the Interactible component. Checks for nearby Interactibles and triggers
+/// Works in conjunction with the Interactable component. Checks for nearby Interactables and triggers
 /// it on a keypress.
 /// </summary>
 public class Interactor : MonoBehaviour
@@ -10,21 +10,21 @@ public class Interactor : MonoBehaviour
     public float interactionRadius = 2f;
     public KeyCode[] interactActionKeys; // I should really learn how to use the new input system :/
 
-    // maintain a list of Interactibles in the scene
-    private List<Interactible> interactibles = new List<Interactible>();
+    // maintain a list of Interactables in the scene
+    private List<Interactable> interactables = new List<Interactable>();
 
-    // allow Interactible components to register/unregister themselves
-    public void Register(Interactible interaction)
+    // allow Interactable components to register/unregister themselves
+    public void Register(Interactable interaction)
     {
-        if (!interactibles.Contains(interaction))
+        if (!interactables.Contains(interaction))
         {
-            interactibles.Add(interaction);
+            interactables.Add(interaction);
         }
     }
 
-    public void Unregister(Interactible interaction)
+    public void Unregister(Interactable interaction)
     {
-        interactibles.Remove(interaction);
+        interactables.Remove(interaction);
     }
 
     private void Update()
@@ -32,8 +32,8 @@ public class Interactor : MonoBehaviour
         // focus closest interaction within radius
         var focused = GetFocused();
 
-        // set focus state on interactibles
-        foreach (var interaction in interactibles)
+        // set focus state on interactables
+        foreach (var interaction in interactables)
         {
             interaction.isFocused = interaction == focused;
         }
@@ -51,7 +51,7 @@ public class Interactor : MonoBehaviour
         }
     }
 
-    private Interactible GetFocused()
+    private Interactable GetFocused()
     {
         // don't focus anything when in a dialogue
         if (GameManager.current.isInDialogue)
@@ -59,15 +59,15 @@ public class Interactor : MonoBehaviour
             return null;
         }
 
-        var result = null as Interactible;
+        var result = null as Interactable;
 
-        // select an interactible to focus
-        foreach (var interaction in interactibles)
+        // select an interactable to focus
+        foreach (var interaction in interactables)
         {
             var toInteraction = interaction.transform.position - transform.position;
 
             // reject if it's disabled or outside the radius
-            if (!interaction.isInteractible ||
+            if (!interaction.isInteractable ||
                 toInteraction.sqrMagnitude > interactionRadius * interactionRadius)
             {
                 continue;

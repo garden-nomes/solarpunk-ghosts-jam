@@ -5,7 +5,7 @@ using UnityEngine.Events;
 /// Works in conjunction with the Interactor behaviour. Allows the player character to interact
 /// with a GameObject when nearby. Can be inherited from or used by itself.
 /// </summary>
-public class Interactible : MonoBehaviour
+public class Interactable : MonoBehaviour
 {
     [Header("Interaction Events")]
     public UnityEvent onInteract;
@@ -15,7 +15,7 @@ public class Interactible : MonoBehaviour
     public UnityEvent onBlur; // in web programming an input is "blurred" when it loses focus
 
     // can be overridden by child classes
-    public virtual bool isInteractible => true;
+    public virtual bool isInteractable => true;
 
     public virtual void OnInteract()
     {
