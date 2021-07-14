@@ -587,7 +587,7 @@ PrefabInstance:
       objectReference: {fileID: 2480198943629176163, guid: 21a090511d2fe4780b44e6d24e3ae0aa, type: 3}
     - target: {fileID: 5986279721224018152, guid: 4f65671affef245cd9dbe8613aced254, type: 3}
       propertyPath: m_Name
-      value: Dialogue
+      value: Dialogue System
       objectReference: {fileID: 0}
     - target: {fileID: 6686388354439055680, guid: 4f65671affef245cd9dbe8613aced254, type: 3}
       propertyPath: m_SizeDelta.y

@@ -1817,7 +1817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1804403169889672078}
   m_Layer: 0
-  m_Name: Dialogue
+  m_Name: DialogueSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
