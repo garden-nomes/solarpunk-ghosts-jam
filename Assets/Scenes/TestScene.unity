@@ -205,7 +205,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &720785393
 MonoBehaviour:
@@ -370,7 +370,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1382590745
 PrefabInstance:
@@ -384,8 +384,12 @@ PrefabInstance:
       value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 1889087277122856267, guid: 837180581c6524595ba3604006463322, type: 3}
+      propertyPath: yarnProgram
+      value: 
+      objectReference: {fileID: 2480198943629176163, guid: 474c8457912ef4c4eb6e4b9bd1ff3e10, type: 3}
+    - target: {fileID: 1889087277122856267, guid: 837180581c6524595ba3604006463322, type: 3}
       propertyPath: dialogueNode
-      value: Test.Red
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 1889087277122856268, guid: 837180581c6524595ba3604006463322, type: 3}
       propertyPath: m_Sprite
@@ -405,7 +409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1889087277122856269, guid: 837180581c6524595ba3604006463322, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1889087277122856269, guid: 837180581c6524595ba3604006463322, type: 3}
       propertyPath: m_LocalPosition.x
@@ -461,8 +465,12 @@ PrefabInstance:
       value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 1889087277122856267, guid: 837180581c6524595ba3604006463322, type: 3}
+      propertyPath: yarnProgram
+      value: 
+      objectReference: {fileID: 2480198943629176163, guid: 6d263432d5b7e475da87c55213866b2e, type: 3}
+    - target: {fileID: 1889087277122856267, guid: 837180581c6524595ba3604006463322, type: 3}
       propertyPath: dialogueNode
-      value: Test.Blue
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 1889087277122856268, guid: 837180581c6524595ba3604006463322, type: 3}
       propertyPath: m_Sprite
@@ -482,7 +490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1889087277122856269, guid: 837180581c6524595ba3604006463322, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1889087277122856269, guid: 837180581c6524595ba3604006463322, type: 3}
       propertyPath: m_LocalPosition.x
@@ -577,14 +585,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4108987198319139659, guid: 4f65671affef245cd9dbe8613aced254, type: 3}
-      propertyPath: yarnScripts.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4108987198319139659, guid: 4f65671affef245cd9dbe8613aced254, type: 3}
-      propertyPath: yarnScripts.Array.data[0]
-      value: 
-      objectReference: {fileID: 2480198943629176163, guid: 21a090511d2fe4780b44e6d24e3ae0aa, type: 3}
     - target: {fileID: 5986279721224018152, guid: 4f65671affef245cd9dbe8613aced254, type: 3}
       propertyPath: m_Name
       value: Dialogue System
