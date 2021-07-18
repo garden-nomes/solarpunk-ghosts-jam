@@ -8,7 +8,7 @@ using UnityEngine;
 public class Interactor : MonoBehaviour
 {
     public float interactionRadius = 2f;
-    public KeyCode[] interactActionKeys; // I should really learn how to use the new input system :/
+    public string interactButton;
 
     // maintain a list of Interactables in the scene
     private List<Interactable> interactables = new List<Interactable>();
@@ -39,16 +39,8 @@ public class Interactor : MonoBehaviour
         }
 
         // trigger interaction on key up
-        if (focused != null && interactActionKeys != null)
-        {
-            foreach (var keyCode in interactActionKeys)
-            {
-                if (Input.GetKeyUp(keyCode))
-                {
-                    focused.OnInteract();
-                }
-            }
-        }
+        if (focused != null && Input.GetButtonDown(interactButton))
+            focused.OnInteract();
     }
 
     private Interactable GetFocused()
