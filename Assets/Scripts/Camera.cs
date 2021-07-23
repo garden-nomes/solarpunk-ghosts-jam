@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 
-enum CameraMode
+public enum CameraMode
 {
     Static = 0,
     Follow
