@@ -6,6 +6,8 @@ public class Warp : MonoBehaviour
 {
     // describes whether the warp is open or closed
     public bool openness = false;
+    public bool occupiedness = false;
+    public Collider2D player;
 
     // Start is called before the first frame update
     void Start()
@@ -16,14 +18,21 @@ public class Warp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (occupiedness && Input.GetKeyDown("e"))
+           Debug.Log("player interacting with entrance");
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        // check for user input
-        if (openness && Input.GetKeyDown("e") && other.CompareTag("Player"))
-            // open new scene
-            Debug.Log("The user requested to open up the scene.");
+        if (openness && collision.CompareTag("Player"))
+        {
+            player = collision;
+            occupiedness = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        occupiedness = false;
     }
 }
