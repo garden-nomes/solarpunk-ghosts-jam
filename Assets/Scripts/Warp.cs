@@ -19,12 +19,13 @@ public class Warp : MonoBehaviour
         
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log("Hello, world!");
         // check for user input
-        if (other.CompareTag("Player") && openness && Input.GetKeyDown("e"))
-            // open new scene
-            Debug.Log("The user requested to open up the scene.");
+        if (Input.GetKeyDown("e"))
+            if (openness)
+                if (other.CompareTag("Player"))
+                    // open new scene
+                    Debug.Log("The user requested to open up the scene.");
     }
 }
