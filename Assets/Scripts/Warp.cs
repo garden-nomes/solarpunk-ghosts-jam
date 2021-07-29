@@ -10,7 +10,7 @@ public class Warp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -21,11 +21,10 @@ public class Warp : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
+        Debug.Log("Hello, world!");
         // check for user input
         if (other.CompareTag("Player") && openness && Input.GetKeyDown("e"))
             // open new scene
-            System.Console.WriteLine("The user requested to open up the scene.");
-            
-
+            Debug.Log("The user requested to open up the scene.");
     }
 }
