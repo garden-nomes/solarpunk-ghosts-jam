@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
 {
     // TODO: Collisions, or any kind of physics really. I'm not sure yet whether we're using the 2D
     // or 3D physics systems (or neither?) -- tbh it probably depends on whether we want a z-up or y-up
-    // coordinate systems
+    // coordinate system.
 
     public float moveSpeed = 3f;
 
